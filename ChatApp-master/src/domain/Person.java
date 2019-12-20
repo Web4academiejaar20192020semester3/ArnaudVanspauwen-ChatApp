@@ -25,23 +25,27 @@ public class Person {
 	private String state = "OFFLINE";
 
 	public Person(String userId, String password, String firstName,
-			String lastName,Role role) {
+			String lastName,String geslacht,int leeftijd, Role role) {
 		setUserId(userId);
 		setHashedPassword(password);
 		setFirstName(firstName);
 		setLastName(lastName);
 		setRole(role);
+		setGeslacht(geslacht);
+		setLeeftijd(leeftijd);
 		friendList = new FriendList();
 	}
 
 	public Person(String userId, String password, String salt,
-			String firstName, String lastName,Role role) {
+			String firstName, String lastName,String geslacht,int leeftijd, Role role) {
 		setUserId(userId);
 		setPassword(password);
 		setSalt(salt);
 		setFirstName(firstName);
 		setLastName(lastName);
 		setRole(role);
+		setGeslacht(geslacht);
+		setLeeftijd(leeftijd);
 		friendList = new FriendList();
 	}
 
@@ -59,14 +63,14 @@ public class Person {
 
 	public void setUserId(String userId) {
 		if (userId.isEmpty()) {
-			throw new IllegalArgumentException("No id given");
+			throw new IllegalArgumentException("Email niet correct (leeg)");
 		}
 		String USERID_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
 				+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 		Pattern p = Pattern.compile(USERID_PATTERN);
 		Matcher m = p.matcher(userId);
 		if (!m.matches()) {
-			throw new IllegalArgumentException("Email not valid");
+			throw new IllegalArgumentException("Email niet correct (leeg)");
 		}
 		this.userId = userId;
 	}
@@ -81,21 +85,21 @@ public class Person {
 
 	public boolean isCorrectPassword(String password) {
 		if (password.isEmpty()) {
-			throw new IllegalArgumentException("No password given");
+			throw new IllegalArgumentException("Geef paswoord");
 		}
 		return getPassword().equals(hashPassword(password, getSalt()));
 	}
 
 	public void setPassword(String password) {
 		if (password.isEmpty()) {
-			throw new IllegalArgumentException("No password given");
+			throw new IllegalArgumentException("Geef paswoord");
 		}
 		this.password = password;
 	}
 
 	public void setHashedPassword(String password) {
 		if (password.isEmpty()) {
-			throw new IllegalArgumentException("No password given");
+			throw new IllegalArgumentException("Geef paswoord");
 		}
 		this.password = hashPassword(password);
 	}
@@ -132,6 +136,25 @@ public class Person {
 
 	public String getSalt() {
 		return salt;
+	}
+
+	public String getGeslacht() {
+		return geslacht;
+	}
+
+	public void setGeslacht(String geslacht) {
+		if (geslacht.isEmpty()) {
+			throw new IllegalArgumentException("geen geslacht gegeven");
+		}
+		this.geslacht = geslacht;
+	}
+
+	public int getLeeftijd() {
+		return leeftijd;
+	}
+
+	public void setLeeftijd(int leeftijd) {
+		this.leeftijd = leeftijd;
 	}
 
 	public String getFirstName() {

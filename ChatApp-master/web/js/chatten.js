@@ -57,7 +57,8 @@ function startConversation(friendName) {
         type: "GET",
         url: "Controller",
         data: {
-            'action': 'startConv', 'friend': friendName
+            'action': 'startConv',
+            'friend': friendName
         },
         success: function (output) {
             let id = friendName+"content";

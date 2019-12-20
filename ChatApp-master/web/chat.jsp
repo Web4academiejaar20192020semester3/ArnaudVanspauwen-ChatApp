@@ -33,6 +33,7 @@
         <br>
         <p>VRIENDEN:</p>
         <table class="table-sm table-striped table-bordered table-hover" id="friendlist"></table>
+        <div id="messages"></div>
         <div class="form-group">
             <label for="stateText">Change State</label>
             <input type="text" class="form-control" id="stateText">
@@ -47,8 +48,8 @@
             <button type="submit" class="btn btn-primary" id="friendbutton">Add</button>
         </div>
     </div>
-    
-    <div id="messages"></div>
+
+
 </main>
 <jsp:include page="footer.jsp">
     <jsp:param name="title" value="Home"/>
