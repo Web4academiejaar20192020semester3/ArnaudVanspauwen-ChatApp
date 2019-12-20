@@ -27,25 +27,27 @@
     </c:if>
     <div>
         <div class="form-group">
-        <p>STATUS:</p>
-        <p id="stateDiv" style="font-size: 40px; color: #007BFF"></p>
+            <p>STATUS:</p>
+            <p id="stateDiv" style="font-size: 40px; color: #007BFF"></p>
         </div>
         <br>
         <p>VRIENDEN:</p>
+        <p>Klik op de naam om te chatten!</p>
         <table class="table-sm table-striped table-bordered table-hover" id="friendlist"></table>
         <div id="messages"></div>
+        <br>
         <div class="form-group">
-            <label for="stateText">Change State</label>
+            <label for="stateText" style="color: #036BD9">Verander status:</label>
             <input type="text" class="form-control" id="stateText">
             <br>
-            <button type="submit" class="btn btn-primary" id="statebutton">Change</button>
+            <button type="submit" class="btn btn-primary" id="statebutton">Verander</button>
         </div>
         <br>
         <div class="form-group">
-            <label for="friendText">Add Friend</label>
+            <label for="friendText" style="color: #036BD9">Voeg een vriend toe:</label>
             <input type="text" class="form-control" id="friendText">
             <br>
-            <button type="submit" class="btn btn-primary" id="friendbutton">Add</button>
+            <button type="submit" class="btn btn-primary" id="friendbutton">Voeg toe</button>
         </div>
     </div>
 

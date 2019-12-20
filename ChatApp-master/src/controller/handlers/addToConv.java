@@ -23,7 +23,7 @@ public class addToConv extends AsyncRequestHandler {
         try {
             friend = getPersonService().getByName(friendName);
             try {
-                getPersonService().addToConversation(person,friend,message);
+                getPersonService().addToConversation(person, friend, message);
             } catch (Exception e) {
                 errors.add(e.getMessage());
             }

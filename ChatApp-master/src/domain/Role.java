@@ -1,19 +1,19 @@
 package domain;
 
 public enum Role {
-	BIB("bibliothekaris"), LID("lid");
+    BIB("bibliothekaris"), LID("lid");
 
-	private String description;
+    private String description;
 
-	Role(String description) {
-		this.description = description;
-	}
-	
-	Role() {
-		
-	}
+    Role(String description) {
+        this.description = description;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    Role() {
+
+    }
+
+    public String getDescription() {
+        return description;
+    }
 }

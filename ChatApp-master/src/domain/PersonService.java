@@ -7,55 +7,55 @@ import db.PersonRepository;
 import db.PersonRepositoryStub;
 
 public class PersonService {
-	private PersonRepository personRepository = new PersonRepositoryStub();
+    private PersonRepository personRepository = new PersonRepositoryStub();
 
-	private MessageRepositoryStub messageRepositoryStub = new MessageRepositoryStub();
+    private MessageRepositoryStub messageRepositoryStub = new MessageRepositoryStub();
 
-	public PersonService(){
-	}
-	
-	public Person getPerson(String personId)  {
-		return getPersonRepository().get(personId);
-	}
+    public PersonService() {
+    }
 
-	public List<Person> getPersons() {
-		return getPersonRepository().getAll();
-	}
+    public Person getPerson(String personId) {
+        return getPersonRepository().get(personId);
+    }
 
-	public void addPerson(Person person) {
-		getPersonRepository().add(person);
-	}
+    public List<Person> getPersons() {
+        return getPersonRepository().getAll();
+    }
 
-	public void updatePersons(Person person) {
-		getPersonRepository().update(person);
-	}
+    public void addPerson(Person person) {
+        getPersonRepository().add(person);
+    }
 
-	public void deletePerson(String id) {
-		getPersonRepository().delete(id);
-	}
-	
-	public Person getAuthenticatedUser(String email, String password) {
-		return getPersonRepository().getAuthenticatedUser(email, password);
-	}
+    public void updatePersons(Person person) {
+        getPersonRepository().update(person);
+    }
 
-	private PersonRepository getPersonRepository() {
-		return personRepository;
-	}
+    public void deletePerson(String id) {
+        getPersonRepository().delete(id);
+    }
 
-	public Person getByName(String name){
-		return getPersonRepository().getByName(name);
-	}
+    public Person getAuthenticatedUser(String email, String password) {
+        return getPersonRepository().getAuthenticatedUser(email, password);
+    }
+
+    private PersonRepository getPersonRepository() {
+        return personRepository;
+    }
+
+    public Person getByName(String name) {
+        return getPersonRepository().getByName(name);
+    }
 
 
-	public void startConversation(Person person1, Person person2) {
-		messageRepositoryStub.startConversation(person1, person2);
-	}
+    public void startConversation(Person person1, Person person2) {
+        messageRepositoryStub.startConversation(person1, person2);
+    }
 
-	public void addToConversation(Person person1, Person person2, String message) {
-		messageRepositoryStub.addToConversation(person1, person2, message);
-	}
+    public void addToConversation(Person person1, Person person2, String message) {
+        messageRepositoryStub.addToConversation(person1, person2, message);
+    }
 
-	public Conversation getConversation(Person person1, Person person2) {
-		return messageRepositoryStub.getConversation(person1, person2);
-	}
+    public Conversation getConversation(Person person1, Person person2) {
+        return messageRepositoryStub.getConversation(person1, person2);
+    }
 }

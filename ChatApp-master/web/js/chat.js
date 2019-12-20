@@ -28,18 +28,17 @@ function getFriends() {
 }
 
 function getFriendData() {
-    if(getFriendRequest.readyState == 4) {
-        if(getFriendRequest.status == 200){
+    if (getFriendRequest.readyState == 4) {
+        if (getFriendRequest.status == 200) {
             let json = JSON.parse(getFriendRequest.responseText);
 
             let friendlist = document.getElementById("friendlist");
 
-            if(friendlist.childNodes.length > 0){
+            if (friendlist.childNodes.length > 0) {
                 while (friendlist.childNodes[0] != null) {
                     friendlist.removeChild(friendlist.childNodes[0])
                 }
             }
-
             for (let i = 0; i < json.friends.length; i++) {
                 let tablerow = document.createElement('tr');
                 let name = json.friends[i].name;

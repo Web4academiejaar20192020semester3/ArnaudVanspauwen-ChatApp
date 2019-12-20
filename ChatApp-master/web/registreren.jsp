@@ -24,31 +24,31 @@
     </c:if>
         <form method="post" action="Controller?action=Registreren" class="login">
             <div class="form-group">
-                <label for="email">Jouw email </label>
+                <label for="email">Email </label>
                 <input class="form-control" type="email" id="email" name="email">
             </div>
             <div class="form-group">
-                <label for="firstname">Jouw voornaam </label>
+                <label for="firstname">Voornaam </label>
                 <input class="form-control" type="text" id="firstname" name="firstname">
             </div>
             <div class="form-group">
-                <label for="lastname">Jouw familienaam </label>
+                <label for="lastname">Familienaam </label>
                 <input class="form-control" type="text" id="lastname" name="lastname">
             </div>
             <div class="form-group">
-                <label for="age">Jouw leeftijd</label>
+                <label for="age">Leeftijd</label>
                 <input class="form-control" type="number" id="age" name="age">
             </div>
             <div class="form-group">
-                <label for="gender">Jouw geslacht</label>
+                <label for="gender">Geslacht</label>
                 <input class="form-control" type="text" id="gender" name="gender">
             </div>
             <div class="form-group">
-                <label for="password">password</label>
+                <label for="password">paswoord</label>
                 <input class="form-control" type="password" id="password" name="password">
             </div>
             <div class="form-group">
-                <label for="confirm_password">Confirm password</label>
+                <label for="confirm_password">Bevestig paswoord</label>
                 <input class="form-control" type="password" id="confirm_password" name="confirm_password">
             </div>
             <div class="form-group">

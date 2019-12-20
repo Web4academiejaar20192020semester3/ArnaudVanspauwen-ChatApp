@@ -15,6 +15,16 @@ form{
     margin-right: auto;
 }
 
+.friend{
+    background: #f1f0f0;
+    color: #000000;
+}
+
+.self{
+    background: #0099ff;
+    color: #ffffff;
+}
+
 
 /*
 body {
